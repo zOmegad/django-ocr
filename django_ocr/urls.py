@@ -25,4 +25,5 @@ urlpatterns = [
 	url(r'^food/', include('food.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
+    url(r'^signup/$', views.signup, name='signup'),
 ]
