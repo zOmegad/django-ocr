@@ -21,3 +21,10 @@ def signup(request):
 	else:
 		form = UserCreationForm()
 	return render(request, 'signup.html', {'form': form})
+
+def profile(request):
+	
+	if request.user.is_authenticated:
+		return render(request, 'profile.html')
+	else:
+		return redirect('/')
