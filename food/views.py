@@ -3,7 +3,12 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 
 def index(request):
-    return render(request, 'food/index.html')
+	query = request.POST.get("query")
+	if not query:
+		pass
+	else:
+		print(query)
+	return render(request, 'food/index.html')
 
 def signup(request):
 

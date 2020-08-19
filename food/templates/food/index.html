@@ -1,5 +1,16 @@
 {% extends 'base_generic.html' %}
 
 {% block content %}	
-Hello world !
+<h1>Du gras, oui, mais de qualité !</h1>
+<h2>Trouvez un produit de substitution pour ce que vous consommez tous les jours.</h2>
+
+  <form class="form-signin" role="form" method="post">
+	<div class="mt-2">
+		{% csrf_token %}
+        <input id="my_query" name="query" class="form-control" placeholder="Type a product name.." autofocus>         		
+	</div>
+	<div class="mt-2">
+	        <button class="btn btn-lg btn-dark btn-block" type="button">Go!</button>
+	</div>
+   </form>   
 {% endblock %}
