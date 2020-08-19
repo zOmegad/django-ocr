@@ -22,18 +22,3 @@ for item in categories[:4]:
 			new_cat.products.add(new_product)
 		except:
 			pass
-
-'''
-products = openfoodfacts.products.get_all_by_category('Snack')
-for item in products:
-	print(item['product_name'])
-#item = Product(name="test_code", nutriscore=4)
-#item.save()
-#print(Category.objects.all().values_list('id', 'name'))
-lol = Category.objects.first()
-print(lol.name)
-print(lol.products.all().values_list('id', 'name'))
-prout = Category.objects.last()
-print(prout.name)
-print(prout.products.all().values_list('id', 'name'))
-'''
