@@ -1,0 +1,10 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}	
+
+{% for item in products %}
+{{ item.name }}, {{ item.nutriscore }} 
+<a href="{% url 'better' food_id=item.id %}">Lien</a><br>
+
+{% endfor %}
+{% endblock %}

@@ -20,6 +20,8 @@ from django.urls import path
 from food import views
 
 urlpatterns = [
+    url(r'products/', views.products),
+    url(r'^better/(?P<food_id>\d+)/$', views.better, name='better'),
     url(r'^$', views.index),
 	url(r'food/', views.index),
 	url(r'^food/', include('food.urls')),
