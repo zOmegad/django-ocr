@@ -1,10 +1,20 @@
 {% extends 'base_generic.html' %}
 
 {% block content %}	
+<div class="container">
+	<div class="row">
+		{% for item in products %}
+	  <div class="col-sm-4 mt-2">
+	    <div class="card">
+	      <div class="card-body">
+	        <h5 class="card-title">{{ item.name }}, {{ item.nutriscore }}</h5>
+	        <p class="card-text"><a href="{% url 'better' food_id=item.id %}">Lien</a></p>
+	        <a href="#" class="btn btn-primary">Go somewhere</a>
+	      </div>
+	    </div>
+	  </div>
+	  {% endfor %}
+	</div>
+</div>
 
-{% for item in products %}
-{{ item.name }}, {{ item.nutriscore }} 
-<a href="{% url 'better' food_id=item.id %}">Lien</a><br>
-
-{% endfor %}
 {% endblock %}

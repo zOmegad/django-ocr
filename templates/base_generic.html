@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Django app</title>
+	<title>Pur Beurre</title>
 
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet" type="text/css">
 	
 	{% load static %}
+	<link rel="shortcut icon" type="image/png" href="{% static 'media/logo_pur_beurre-favicon.png' %}"/>
 	<link rel="stylesheet" type="text/css" href="{% static 'food/style.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
@@ -16,17 +17,11 @@
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-	    <a class="navbar-brand" href="/">Hidden brand</a>
+	    <a class="navbar-brand" href="#">
+		    <img src="../../static/media/logo_pur_beurre.png" width="30" height="30" class="d-inline-block align-top" alt="">
+		    Pur beurre
+		  </a>
 	    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-	      <li class="nav-item active">
-	        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#">Link</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-	      </li>
 	    </ul>
 	    <form class="form-inline my-2 my-lg-0">
 	       {% if user.is_authenticated %}
