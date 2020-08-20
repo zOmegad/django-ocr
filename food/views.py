@@ -16,6 +16,7 @@ def index(request):
 def products(request):
 	products = Product.objects.all()
 	categories = Category.objects.all()
+	query = request.POST.get("query")
 	return render(request, 'food/products.html', {'products':products, 'categories':categories})
 
 def better(request, food_id):
@@ -28,6 +29,7 @@ def better(request, food_id):
 			better_food = item
 		else:
 			pass
+			
 	return render(request, 'food/better.html', {'product': food, 'new_product': better_food})
 
 def signup(request):

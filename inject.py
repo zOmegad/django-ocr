@@ -18,7 +18,8 @@ for item in categories[:25]:
 		try:
 			food_name = food_item['product_name']
 			foot_nutri = food_item['nutriscore_score']
-			new_product = Product(name=food_name, nutriscore=foot_nutri, category_id=new_cat_id)
+			food_image = food_item['image_front_url']
+			new_product = Product(name=food_name, nutriscore=foot_nutri, image=food_image, category_id=new_cat_id)
 			new_product.save()
 			new_cat.products.add(new_product)
 			enum+=1

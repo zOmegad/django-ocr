@@ -5,13 +5,14 @@
 	<div class="row">
 		{% for item in products %}
 	  <div class="col-sm-4 mt-2">
-	    <div class="card">
-	      <div class="card-body">
-	        <h5 class="card-title">{{ item.name }}, {{ item.nutriscore }}</h5>
-	        <p class="card-text"><a href="{% url 'better' food_id=item.id %}">Lien</a></p>
-	        <a href="#" class="btn btn-primary">Go somewhere</a>
-	      </div>
-	    </div>
+	    <div class="card" style="width: 18rem;">
+		  <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+		  <div class="card-body">
+		    <h5 class="card-title">{{ item.name }}, {{ item.nutriscore }}</h5>
+		    <p class="card-text"><a href="{% url 'better' food_id=item.id %}">Lien</a></p>
+		    <a href="#" class="btn btn-primary">Sauvegarder</a>
+		  </div>
+		</div>
 	  </div>
 	  {% endfor %}
 	</div>
