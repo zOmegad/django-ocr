@@ -10,7 +10,9 @@
 		  <div class="card-body">
 		    <h5 class="card-title">{{ item.name }}, {{ item.nutriscore }}</h5>
 		    <p class="card-text"><a href="{% url 'better' food_id=item.id %}">Lien</a></p>
-		    <a href="#" class="btn btn-primary">Sauvegarder</a>
+		    {% if user.is_authenticated %}
+		    <a href="{% url 'save_product' food_id=item.id %}" class="btn btn-primary">Sauvegarder</a>
+		    {% endif %} 
 		  </div>
 		</div>
 	  </div>

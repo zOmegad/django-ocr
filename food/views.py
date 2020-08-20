@@ -29,8 +29,20 @@ def better(request, food_id):
 			better_food = item
 		else:
 			pass
-			
+
 	return render(request, 'food/better.html', {'product': food, 'new_product': better_food})
+
+def my_save_food(request):
+	my_food = SavedProduct.objects.filter(user=request.user)
+
+	return render(request, 'my_save_food.html', {'my_food': my_food})
+
+def save_product(request, food_id):
+	print('lol')
+	food = Product.objects.get(pk=food_id)
+	new_save = SavedProduct(product_id=food_id, user=request.user)
+	new_save.save()
+	return redirect('/')
 
 def signup(request):
 
