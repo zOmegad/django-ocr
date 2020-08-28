@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'food',
     'favorite',
     'search',
+    'my_profile',
 ]
 
 MIDDLEWARE = [

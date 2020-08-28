@@ -17,12 +17,15 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.urls import path
 
-from food import views
+from food import views as food
 from favorite import views
+from my_profile import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^$', food.index, name='food'),
     path('food/', include('food.urls')),
     path('favorite/', include('favorite.urls')),
+    path('my_profile/', include('my_profile.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
