@@ -13,9 +13,6 @@ def index(request):
 
 	return render(request, 'food/index.html')
 
-def test(request):
-	return render(request, 'food/index.html')
-
 def products(request):
 	products = Product.objects.all()
 	categories = Category.objects.all()
