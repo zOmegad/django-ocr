@@ -20,6 +20,7 @@ from django.urls import path
 from food import views as food
 from favorite import views
 from my_profile import views
+from sign_up import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +28,6 @@ urlpatterns = [
     path('food/', include('food.urls')),
     path('favorite/', include('favorite.urls')),
     path('my_profile/', include('my_profile.urls')),
+    path('sign_up/', include('sign_up.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 ]

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'favorite',
     'search',
     'my_profile',
+    'sign_up',
 ]
 
 MIDDLEWARE = [
