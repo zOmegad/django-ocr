@@ -18,17 +18,11 @@ from django.contrib import admin
 from django.urls import path
 
 from food import views
+from favorite import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'products/', views.products),
-    url(r'my_save_food/', views.my_save_food),
-    url(r'^better/(?P<food_id>\d+)/$', views.better, name='better'),
-    url(r'^better/(?P<food_id>\d+)/save_product', views.save_product, name='save_product'),
-    url(r'^$', views.index),
-	url(r'food/', views.index),
-	url(r'^food/', include('food.urls')),
+    path('food/', include('food.urls')),
+    path('favorite/', include('favorite.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    url(r'^signup/$', views.signup, name='signup'),
-    url(r'^profile/$', views.profile, name='profile'),
 ]

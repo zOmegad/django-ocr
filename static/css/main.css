@@ -3,3 +3,16 @@
     height: 10vw;
     object-fit: cover;
 }
+
+.bg-rooibos {
+	background-color: #c45525;
+}
+
+.bg-biscuit {
+	background-color: #e8a75d;
+}
+
+.text-white {
+	color: white;
+	font-weight: 800px;
+}

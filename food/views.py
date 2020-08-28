@@ -32,11 +32,6 @@ def better(request, food_id):
 
 	return render(request, 'food/better.html', {'product': food, 'new_product': better_food})
 
-def my_save_food(request):
-	my_food = SavedProduct.objects.filter(user=request.user)
-
-	return render(request, 'my_save_food.html', {'my_food': my_food})
-
 def save_product(request, food_id):
 	print('lol')
 	food = Product.objects.get(pk=food_id)
@@ -62,7 +57,7 @@ def signup(request):
 	return render(request, 'signup.html', {'form': form})
 
 def profile(request):
-	
+
 	if request.user.is_authenticated:
 		return render(request, 'profile.html')
 	else:

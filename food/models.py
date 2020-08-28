@@ -16,14 +16,6 @@ class Product(models.Model):
 class Category(models.Model):
 	name=models.CharField(max_length=200)
 	products = models.ManyToManyField(Product, related_name='products')
-	
+
 	def __str__(self):
 		return self.name
-
-class SavedProduct(models.Model):
-	product = models.ForeignKey(Product,
-    on_delete=models.CASCADE)
-	user=models.ForeignKey(User, on_delete=models.CASCADE, related_name='user')
-
-	def __str__(self):
-		return self.product.name
