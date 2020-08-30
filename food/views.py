@@ -7,14 +7,11 @@ def index(request):
 	if not query:
 		pass
 	else:
-		try:
-			product = Product.objects.filter(name__contains=query).first()
-			category = Category.objects.get(pk=product.category_id)
-			food_category = category.products.all()
-			products = food_category.order_by('nutriscore',)
-			return render(request, 'food/products.html', {'products':products, 'product': product})
-		except:
-			return render(request, 'food/not_found.html')
+		product = Product.objects.filter(name__contains=query).first()
+		category = Category.objects.get(pk=product.category_id)
+		food_category = category.products.all()
+		products = food_category.order_by('nutriscore',)
+		return render(request, 'food/products.html', {'products':products, 'product': product})
 	return render(request, 'food/index.html')
 
 def products(request):

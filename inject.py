@@ -19,11 +19,15 @@ for item in categories[:25]:
 			food_name = food_item['product_name']
 			foot_nutri = food_item['nutriscore_score']
 			food_image = food_item['image_front_url']
-			new_product = Product(name=food_name, nutriscore=foot_nutri, image=food_image, category_id=new_cat_id)
+			food_url = food_item['url']
+			food_nutri_grade = food_item['nutriscore_grade']
+			new_product = Product(name=food_name, nutriscore=foot_nutri, image=food_image, nutriscore_grade=food_nutri_grade, url=food_url, category_id=new_cat_id)
 			new_product.save()
 			new_cat.products.add(new_product)
 			enum+=1
 			print(enum)
+			print(food_url)
+			print(food_nutri_grade)
 			if enum == 150:
 				break
 		except:
