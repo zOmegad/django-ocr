@@ -12,6 +12,10 @@
 	background-color: #e8a75d;
 }
 
+.bg-moule {
+  background-color: #345a61;
+}
+
 .text-white {
 	color: white;
 	font-weight: 800px;
@@ -21,6 +25,7 @@
   width: 100%;
   max-width: 500px;
 }
+
 
 blockquote {
   background: transparent;
@@ -45,10 +50,85 @@ blockquote p {
     position: absolute;
     right:-20px;
     top:-20px;
-    background:red;
+    background:green;
     text-align: center;
     border-radius: 30px 30px 30px 30px;
     color:white;
     padding:5px 10px;
     font-size:20px;
+}
+
+.bg-gradient-biscuit {
+  background: rgb(245,180,107);
+  background: radial-gradient(circle, rgba(245,180,107,1) 0%, rgba(231,165,89,1) 46%, rgba(204,143,74,1) 100%);
+}
+
+.card-biscuit {
+  border-style: solid;
+  border-width: medium;
+  border-color: #e8a75d;
+}
+
+.card-moule {
+  border-style: solid;
+  border-width: medium;
+  border-color: #345a61;
+  background-color: #345a61;
+}
+
+.btn-moule {
+  color: #fff;
+  background-color: #345a61;
+  border-color: #fff;
+}
+.btn-moule:hover {
+  color: #345a61;
+  background-color: #fff;
+  border-color: #fff;
+}
+.btn-moule:focus, .btn-moule.focus {
+  color: #345a61;
+  background-color: #fff;
+  border-color: #345a61;
+  box-shadow: 0 0 0 0.2rem rgba(246, 122, 88, 0.5);
+}
+
+.btn-moule:not(:disabled):not(.disabled):active, .btn-moule:not(:disabled):not(.disabled).active, .show > .btn-moule.dropdown-toggle {
+  color: #345a61;
+  background-color: #fff;
+  border-color: #345a61;
+}
+.btn-moule:not(:disabled):not(.disabled):active:focus, .btn-moule:not(:disabled):not(.disabled).active:focus, .show > .btn-moule.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem #fff;
+}
+
+
+.btn-biscuit {
+  color: #fff;
+  background-color: #e8a75d;
+  border-color: #e8a75d;
+}
+.btn-biscuit:hover {
+  color: #345a61;
+  background-color: #fff;
+  border-color: #fff;
+}
+.btn-biscuit:focus, .btn-biscuit.focus {
+  color: #fff;
+  background-color: #f24516;
+  border-color: #ee3e0d;
+  box-shadow: 0 0 0 0.2rem rgba(246, 122, 88, 0.5);
+}
+.btn-biscuit.disabled, .btn-biscuit:disabled {
+  color: #fff;
+  background-color: #f4623a;
+  border-color: #f4623a;
+}
+.btn-biscuit:not(:disabled):not(.disabled):active, .btn-biscuit:not(:disabled):not(.disabled).active, .show > .btn-biscuit.dropdown-toggle {
+  color: #fff;
+  background-color: #ee3e0d;
+  border-color: #e23a0d;
+}
+.btn-biscuit:not(:disabled):not(.disabled):active:focus, .btn-biscuit:not(:disabled):not(.disabled).active:focus, .show > .btn-biscuit.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(246, 122, 88, 0.5);
 }

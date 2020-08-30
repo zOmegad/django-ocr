@@ -7,6 +7,6 @@ from . import views
 urlpatterns = [
 	url(r'^$', views.index),
 	url(r'products/', views.products),
-    url(r'^better/(?P<food_id>\d+)/$', views.better, name='better'),
-    url(r'^better/(?P<food_id>\d+)/save_product', views.save_product, name='save_product'),
+    url(r'^(?P<food_id>\d+)/$', views.show, name='show'),
+    url(r'^(?P<food_id>\d+)/save_product', views.save_product, name='save_product'),
 ]

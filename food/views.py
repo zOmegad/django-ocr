@@ -23,18 +23,9 @@ def products(request):
 	query = request.POST.get("query")
 	return render(request, 'food/products.html', {'products':products, 'categories':categories})
 
-def better(request, food_id):
+def show(request, food_id):
 	food = Product.objects.get(pk=food_id)
-	category = Category.objects.get(pk=food.category_id)
-	food_category = category.products.all()
-	better_food = food
-	for item in food_category:
-		if better_food.nutriscore > item.nutriscore:
-			better_food = item
-		else:
-			pass
-
-	return render(request, 'food/better.html', {'product': food, 'new_product': better_food})
+	return render(request, 'food/show.html', {'product': food})
 
 def save_product(request, food_id):
 	food = Product.objects.get(pk=food_id)
