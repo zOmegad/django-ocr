@@ -14,7 +14,7 @@
 				            <div class="col">
 				                <div class="card-block px-2">
 													<div class="p-4">
-				                    <h4 class="card-title text-white">{{ product.name }}</h4>
+				                    <h4 class="card-title"><a class="text-white" href="{% url 'show' food_id=product.id %}">{{ product.name }}</a></h4>
 				                    <p class="card-text text-white">{{ product.category.name }}</p>
 													</div>
 												</div>
