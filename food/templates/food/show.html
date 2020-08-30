@@ -21,21 +21,21 @@
 <div class="bg-gradient-biscuit">
 	<div class="container">
       <div class="row">
-        <div class="col-md-6 mt-4">
-          <div class="card">
-            <div class="card-body">
-              <strong>NUTRIGRADE</strong>
+          <div class="col-md-6 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <strong>NUTRIGRADE</strong>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-6 mt-4">
-          <div class="card">
-            <div class="card-body">
-                  Repères nutritionnels pour 100g.
+          <div class="col-md-6 mt-4">
+            <div class="card">
+              <div class="card-body">
+                    Repères nutritionnels pour 100g.
+              </div>
             </div>
           </div>
-        </div>
-		</div>
+		    </div>
     <div class="row">
       <div class="col-md-6 mt-5 align-items-center justify-content-center text-center mb-5">
           <img src="../../static/media/nutriscore_{{product.nutriscore_grade}}.png" style="width: 19.2rem; max-height:10.4rem;" alt="">
@@ -43,6 +43,12 @@
       <div class="col-md-6 mt-5 align-items-center justify-content-center text-center mb-5">
         <a href="{% url 'save_product' food_id=product.id %}" class="btn btn-moule"><i class="fa fa-floppy-o" aria-hidden="true"></i>  Sauvegarder</a>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 mt-5 align-items-center justify-content-center text-center mb-5">
+        <a class="btn btn-moule" href="{{product.url}}">Page OpenFoodFact</a>
+      </div>
+    </div>
   </div>
 </div>
 
