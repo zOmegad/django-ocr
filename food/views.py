@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from food.models import *
 from favorite.models import SavedProduct
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 def search(request):
 	query = request.GET.get("query")
