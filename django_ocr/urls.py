@@ -24,7 +24,7 @@ from sign_up import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^$', food.index, name='food'),
+    path('', food.index, name='food'),
     path('food/', include('food.urls')),
     path('favorite/', include('favorite.urls')),
     path('my_profile/', include('my_profile.urls')),

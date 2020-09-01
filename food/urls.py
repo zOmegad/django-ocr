@@ -5,8 +5,8 @@ from . import views
 
 
 urlpatterns = [
-	url(r'^$', views.index),
-	url(r'^search/$', views.search, name='search'),
-    url(r'^(?P<food_id>\d+)/$', views.show, name='show'),
-    url(r'^(?P<food_id>\d+)/save_product', views.save_product, name='save_product'),
+	path('', views.index),
+	path('search/', views.search, name='search'),
+    path('<int:food_id>/', views.show, name='show'),
+    path('<int:food_id>/save_product', views.save_product, name='save_product'),
 ]
