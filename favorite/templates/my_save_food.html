@@ -17,9 +17,10 @@
 					 <img class="card-img-top" src="{{ item.product.image }}" alt="">
 					 <div class="card-body">
 						 <h5 class="card-title">{{ item.product.name }}</h5>
-						 <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+						 	<p>
+						 		<a class="btn btn-moule" href="{{item.product.url}}" target="_blank">Lien OpenFood</a>
+					 		</p>
 						 <img src="../../static/media/nutriscore_{{item.product.nutriscore_grade}}.png" style="width: 10.2rem; max-height:5.4rem;" alt="">
-						 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 					 </div>
 				  </div>
 				</div>
