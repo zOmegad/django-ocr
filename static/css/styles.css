@@ -10129,6 +10129,12 @@ header.masthead h1 {
     padding-top: 4.5rem;
     padding-bottom: 0;
   }
+  header.masthead.log {
+    height: 25vh;
+    min-height: 10rem;
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+  }
   header.masthead p {
     font-size: 1.15rem;
   }
