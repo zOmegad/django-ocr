@@ -1,0 +1,45 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<header class="masthead product show">
+	<div class="container h-100">
+			<div class="row h-100 align-items-center justify-content-center text-center">
+              <h2 class="text-white">Saved food</h2>
+				</div>
+		</div>
+</header>
+<div class="bg-gradient-biscuit">
+	<div class="container">
+			<div class="row">
+				{% for item in page_obj %}
+				<div class="col-sm-4 mt-5 mb-1">
+				 <div class="card">
+					 <img class="card-img-top" src="{{ item.product.image }}" alt="">
+					 <div class="card-body">
+						 <h5 class="card-title">{{ item.product.name }}</h5>
+						 <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+						 <img src="../../static/media/nutriscore_{{item.product.nutriscore_grade}}.png" style="width: 10.2rem; max-height:5.4rem;" alt="">
+						 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					 </div>
+				  </div>
+				</div>
+			 {% endfor %}
+		</div>
+		<nav class="">
+			<ul class="pagination justify-content-center">
+				{% if page_obj.has_previous %}
+				<li class="page-item">
+							<a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a
+				</li>
+				{% endif %}
+				{% if page_obj.has_next %}
+				<li class="page-item">
+					<a class="page-link" href="?page={{ page_obj.next_page_number }}">next</a>
+				</li>
+				{% endif %}
+			</ul>
+		</nav>
+  </div>
+</div>
+
+{% endblock %}
