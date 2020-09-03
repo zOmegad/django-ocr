@@ -14,3 +14,6 @@ class ShowPageTestCase(TestCase):
         food = Product.objects.get(pk=1)
         response = self.client.get(reverse('show', args=[food.id]))
         self.assertEqual(response.status_code, 200)
+
+class ProductsPageTestCase(TestCase):
+    
