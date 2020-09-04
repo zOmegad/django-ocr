@@ -9,11 +9,15 @@ class IndexPageTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
 
 class ShowPageTestCase(TestCase):
+    def setUp(self):
+        Product.objects.create(name="Pasta", nutriscore=1,)
+        self.food = Product.objects.get(pk=1)
+
     def test_show_with_product_returns_200(self):
-        product = Product.objects.create(name="Pasta", nutriscore=1,)
-        food = Product.objects.get(pk=1)
-        response = self.client.get(reverse('show', args=[food.id]))
+        response = self.client.get(reverse('show', args=[self.food.id]))
         self.assertEqual(response.status_code, 200)
 
-class ProductsPageTestCase(TestCase):
-    
+class ProductPageTestCase(TestCase):
+    def setUp(self):
+        Product.objects.create(name="Pasta", nutriscore=1,)
+        self.food = Product.objects.get(pk=1)
