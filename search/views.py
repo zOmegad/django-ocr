@@ -6,7 +6,7 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 def search(request):
 	query = request.GET.get("query")
 	if not query:
-		pass
+		return redirect('/')
 	else:
 		product = Product.objects.filter(name__contains=query).first()
 		if not product:
