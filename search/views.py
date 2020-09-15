@@ -10,7 +10,7 @@ def search(request):
 	else:
 		product = Product.objects.filter(name__contains=query).first()
 		if not product:
-			return redirect('not_found_product')
+			return render(request, 'search.html', {'nil_query': query})
 		else:
 			category = Category.objects.get(pk=product.category_id)
 			food_category = category.products.all()
