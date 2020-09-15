@@ -1,0 +1,11 @@
+[run]
+source = .
+[report]
+omit =
+    env/*
+    django_ocr/wsgi.py
+    django_ocr/asgi.py
+    apps.py
+fail_under = 80
+show_missing = True
+skip_covered = False
