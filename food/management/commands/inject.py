@@ -8,6 +8,7 @@ class Command(BaseCommand):
 		Product.objects.all().delete()
 
 		categories = openfoodfacts.facets.get_categories()
+		print("Starting injection ...")
 
 		for item in categories[:25]:
 			cat_name = item['name']
@@ -27,7 +28,7 @@ class Command(BaseCommand):
 					new_product.save()
 					new_cat.products.add(new_product)
 					enum+=1
-					self.stdout.write(enum)
+					print(enum)
 					if enum == 150:
 						break
 				except:
