@@ -13,11 +13,13 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='product',
             name='url',
-            field=models.URLField(default='https://world.openfoodfacts.org/'),
+            field=models.URLField(
+                default='https://world.openfoodfacts.org/'),
         ),
         migrations.AlterField(
             model_name='product',
             name='image',
-            field=models.URLField(default='https://blog.rahulbhutani.com/wp-content/uploads/2020/05/Screenshot-2018-12-16-at-21.06.29.png'),
+            field=models.URLField(
+                default='https://blog.rahulbhutani.com/wp-content/uploads/2020/05/Screenshot-2018-12-16-at-21.06.29.png'),
         ),
     ]
