@@ -7,3 +7,5 @@ to inject db from openfoodfacts
 ./manage.py inject
 
 flake8 --exclude env
+
+./manage.py test tests/
