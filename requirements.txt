@@ -13,11 +13,7 @@ distro==1.4.0
 dj-database-url==0.5.0
 Django==3.1
 django-debug-toolbar==2.2
-<<<<<<< HEAD
-django_heroku
-=======
 django-heroku==0.3.1
->>>>>>> f6b110a434c5a091de7de191e27ccd8e4011eafa
 flake8==3.9.1
 gunicorn==20.0.4
 html5lib==1.0.1
