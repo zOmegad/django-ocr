@@ -26,6 +26,7 @@ urlpatterns = [
     path('search/', include('search.urls')),
     path('favorite/', include('favorite.urls')),
     path('my_profile/', include('my_profile.urls')),
+    path('legal/', include('legal.urls')),
     path('sign_up/', include('sign_up.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 ]

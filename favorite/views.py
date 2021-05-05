@@ -2,8 +2,6 @@ from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from favorite.models import SavedProduct
 
-# Create your views here.
-
 
 def my_save_food(request):
     if request.user.is_authenticated:
