@@ -1,1 +1,1 @@
-web: gunicorn application:django_ocr --log-file -
+web: gunicorn application:django_ocr
