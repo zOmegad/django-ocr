@@ -10,14 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-# import django_heroku
+import django_heroku
 from pathlib import Path
 import os
 from dotenv import load_dotenv
 
 load_dotenv('.env')
-
-# django_heroku.settings(locals())
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -147,3 +145,5 @@ STATICFILES_DIRS = [STATIC_DIR, ]
 LOGIN_REDIRECT_URL = '/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+django_heroku.settings(locals())
