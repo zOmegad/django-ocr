@@ -29,4 +29,8 @@ To check pep8 :
 `flake8 --exclude env`
 
 Coverage :
-`coverage run --omit 'env/*' --source='.' manage.py test django_ocr`
+`coverage run --source='.' manage.py test tests.unit.food.tests_units_food tests.unit.favorite.tests_units_favorite tests.unit.profile.tests_units_profile tests.integration.search.tests_search_integration tests.functional.test_saved_food.tests_saved_food`
+
+
+Report :
+`coverage report --omit=*/apps.py,env/*,*/migrations/*,*/asgi.py,*/wsgi.py,manage.py,tests/*`
