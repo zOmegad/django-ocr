@@ -1,1 +1,1 @@
-web: gunicorn application:django_ocr
+web: gunicorn django_ocr.wsgi:application --log-file -
