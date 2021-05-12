@@ -5,12 +5,14 @@ from django.contrib.auth.models import User
 from food.models import Product
 from favorite.models import SavedProduct
 
+
 class FavoritePageTestCase(TestCase):
     def setUp(self):
-        self.current_user=User.objects.create_user('foo', password='bar')
+        self.current_user = User.objects.create_user('foo', password='bar')
         self.client.force_login(self.current_user)
         food = Product.objects.create(name="Jambon", nutriscore=1)
-        favorite = SavedProduct.objects.create(product=food, user=self.current_user)
+        SavedProduct.objects.create(
+            product=food, user=self.current_user)
 
     def test_saved_food_page_redirect_if_user_logged_out(self):
         self.client.logout()

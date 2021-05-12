@@ -3,10 +3,12 @@ from django.test import TestCase
 
 from food.models import Product
 
+
 class IndexPageTestCase(TestCase):
     def test_index_page_returns_200(self):
         response = self.client.get(reverse('index'))
         self.assertEqual(response.status_code, 200)
+
 
 class ShowPageTestCase(TestCase):
     def setUp(self):

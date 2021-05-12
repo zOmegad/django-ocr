@@ -2,10 +2,11 @@ from django.urls import reverse
 from django.test import TestCase
 from django.contrib.auth.models import User
 
+
 class ProfilePageTestCase(TestCase):
 
     def setUp(self):
-        self.current_user=User.objects.create_user('foo', password='bar')
+        self.current_user = User.objects.create_user('foo', password='bar')
 
     def test_profile_page_redirect_if_user_logged_out(self):
         response = self.client.get(reverse('profile'))
