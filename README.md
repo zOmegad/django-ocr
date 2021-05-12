@@ -9,6 +9,11 @@
 
 
 ## Installation
+- Clone the repo
+`git clone https://github.com/zOmegad/django-ocr.git && cd django-ocr`
+
+- Create environment
+`virtualenv env && source env/bin/activate`
 
 - Create your environment and then
 `pip install -r requirements.txt`
