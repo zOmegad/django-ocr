@@ -4,6 +4,7 @@ python:
 install:
   - pip install -r requirements.txt
 before_script:
+  - sudo service postgresql start
   - psql -c "CREATE DATABASE ocr_petitbeurre;" -U postgres -p 5432
 script:
   - ./manage.py test tests.unit.food.tests_units_food tests.unit.favorite.tests_units_favorite tests.unit.profile.tests_units_profile tests.integration.search.tests_search_integration tests.functional.test_saved_food.tests_saved_food
