@@ -6,8 +6,8 @@ class SavedProductTest(LiveServerTestCase):
 
     def test_click_on_save_button_saves(self):
         selenium = webdriver.Firefox(
-            executable_path=r'/home/jonhson/Downloads/'
-            'geckodriver-v0.29.1-linux64/geckodriver')
+            executable_path=r'/home/travis/build/'
+            'zOmegad/django-ocr/geckodriver')
         selenium.get('http://127.0.0.1:8000/accounts/login/')
         username = selenium.find_element_by_id("username_field")
         password = selenium.find_element_by_id("password_field")

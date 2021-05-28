@@ -8,7 +8,9 @@ install:
 before_script:
   - sudo service postgresql start
   - psql -c "CREATE DATABASE ocr_petitbeurre;" -U postgres -p 5432
-  - pwd	
+  - pwd
+  - wget https://github.com/mozilla/geckodriver/releases/download/v0.29.1/geckodriver-v0.29.1-linux32.tar.gz	
+  - tar -xzvf geckodriver-v0.29.1-linux32.tar.gz
 script:
   - ./manage.py migrate
   - ./manage.py test tests.unit.food.tests_units_food tests.unit.favorite.tests_units_favorite tests.unit.profile.tests_units_profile tests.integration.search.tests_search_integration tests.functional.test_saved_food.tests_saved_food
