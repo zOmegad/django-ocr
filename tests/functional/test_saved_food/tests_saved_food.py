@@ -1,6 +1,6 @@
 from django.test import LiveServerTestCase
 from selenium import webdriver
-from selenium.webdrivers import FirefoxOptions
+from selenium.webdriver import FirefoxOptions
 
 class SavedProductTest(LiveServerTestCase):
 
