@@ -1,13 +1,15 @@
 from django.test import LiveServerTestCase
 from selenium import webdriver
-
+from selenium.webdrivers import FirefoxOptions
 
 class SavedProductTest(LiveServerTestCase):
 
     def test_click_on_save_button_saves(self):
+        opts = FirefoxOptions()
+        opts.add_argument("--headless")
         selenium = webdriver.Firefox(
             executable_path=r'/home/travis/build/'
-            'zOmegad/django-ocr/geckodriver')
+            'zOmegad/django-ocr/geckodriver', firefox_options=opts)
         selenium.get('http://127.0.0.1:8000/accounts/login/')
         username = selenium.find_element_by_id("username_field")
         password = selenium.find_element_by_id("password_field")
