@@ -5,7 +5,7 @@ from favorite.models import SavedProduct
 
 def my_save_food(request):
     if request.user.is_authenticated:
-        my_food = SavedProduct.objects.filter(user=request.user).order_by('id')
+        my_food = SavedProduct.objects.filter(user=request.user).order_by('-check_in')
         paginator = Paginator(my_food, 6)
 
         page_number = request.GET.get('page')
