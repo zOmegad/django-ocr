@@ -10,8 +10,8 @@ class SavedProductTest(LiveServerTestCase):
         opts = FirefoxOptions()
         opts.add_argument("--headless")
         selenium = webdriver.Firefox(
-            executable_path=r'/home/jonhson/'
-            'Documents/ocr/django-ocr/geckodriver', firefox_options=opts)
+            executable_path=r'/home/travis/build/'
+            'zOmegad/django-ocr/geckodriver', firefox_options=opts)
         selenium.get('http://141.94.70.168/accounts/login/')
         username = selenium.find_element_by_id("username_field")
         password = selenium.find_element_by_id("password_field")
