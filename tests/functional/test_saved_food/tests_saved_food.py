@@ -21,7 +21,7 @@ class SavedProductTest(LiveServerTestCase):
 
         selenium.get('http://141.94.70.168/search/?query=Haricot')
         try:
-            element = WebDriverWait(seleniuml, 10).until(
+            save_button = WebDriverWait(selenium, 10).until(
                 selenium.find_element_by_id('save_btn_21')
             )
         finally:
