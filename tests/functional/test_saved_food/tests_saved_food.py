@@ -1,5 +1,6 @@
 from django.test import LiveServerTestCase
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver import FirefoxOptions
 
@@ -9,20 +10,16 @@ class SavedProductTest(LiveServerTestCase):
         opts = FirefoxOptions()
         opts.add_argument("--headless")
         selenium = webdriver.Firefox(
-            executable_path=r'/home/travis/build/'
-            'zOmegad/django-ocr/geckodriver', firefox_options=opts)
+            executable_path=r'/home/jonhson/'
+            'Documents/ocr/django-ocr/geckodriver', firefox_options=opts)
         selenium.get('http://141.94.70.168/accounts/login/')
         username = selenium.find_element_by_id("username_field")
         password = selenium.find_element_by_id("password_field")
 
-        username.send_keys("user")
+        username.send_keys("user_1")
         password.send_keys("azerty12345")
         selenium.find_element_by_id("submit_btn").click()
-        selenium.implicitly_wait(10)
         selenium.get('http://141.94.70.168/search/?query=Haricot')
-        selenium.implicitly_wait(5)
-        source_page = selenium.page_source
-        print(source_page)
         selenium.find_element_by_id("save_btn_21").click()
         selenium.get('http://141.94.70.168/favorite/my_save_food/')
         food_card = selenium.find_element_by_class_name("card-title")
