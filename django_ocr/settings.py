@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'django_ocr.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-if os.getenv('BUILD_ON_TRAVIS', None):
+if os.getenv('TRAVIS', None):
     DATABASES = {
         'default': {
             'ENGINE': "django.db.backends.postgresql_psycopg2",
@@ -95,7 +95,7 @@ if os.getenv('BUILD_ON_TRAVIS', None):
             'PORT': "5432",
         }
     }
-    
+
 else:
     DATABASES = {
         'default': {
