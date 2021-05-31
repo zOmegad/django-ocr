@@ -21,8 +21,7 @@ class SavedProductTest(LiveServerTestCase):
 
         selenium.get('http://141.94.70.168/search/?query=Haricot')
         selenium.implicitly_wait(10)
-        save_button = selenium.find_element(By.xpath('//*[@id="save_btn_21"]'))
-        save_button.click()
+        selenium.find_element_by_xpath('//*[@id="save_btn_21"]').click()
         selenium.get('http://141.94.70.168/favorite/my_save_food/')
         food_card = selenium.find_element_by_class_name("card-title")
         self.assertEqual(food_card.text, "Fonio complet")
