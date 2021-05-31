@@ -1,3 +1,5 @@
+[![Build Status](https://www.travis-ci.com/zOmegad/django-ocr.svg?branch=master)](https://www.travis-ci.com/zOmegad/django-ocr)
+
 # 🍪 Petitbeurre OCR
 
 **Petitbeurre** is a web app built with Django for an openclassroom project. The app finds healthier food after a search. You can create your account with email and username and save food as favorite. This app uses Openfoodfact API.
