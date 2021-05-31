@@ -1,5 +1,6 @@
 from django.test import LiveServerTestCase
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver import FirefoxOptions
 
 class SavedProductTest(LiveServerTestCase):
@@ -20,7 +21,7 @@ class SavedProductTest(LiveServerTestCase):
 
         selenium.get('http://141.94.70.168/search/?query=Haricot')
         try:
-            element = WebDriverWait(driver, 10).until(
+            element = WebDriverWait(seleniuml, 10).until(
                 selenium.find_element_by_id('save_btn_21')
             )
         finally:
