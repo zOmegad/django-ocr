@@ -18,7 +18,7 @@ class SavedProductTest(LiveServerTestCase):
         username.send_keys("user")
         password.send_keys("azerty12345")
         selenium.find_element_by_id("submit_btn").click()
-
+        selenium.implicitly_wait(10)
         selenium.get('http://141.94.70.168/search/?query=Haricot')
         selenium.implicitly_wait(5)
         source_page = selenium.page_source
