@@ -19,6 +19,7 @@ class SavedProductTest(LiveServerTestCase):
         selenium.find_element_by_id("submit_btn").click()
 
         selenium.get('http://141.94.70.168/search/?query=Haricot')
+        selenium.implicitly_wait(5)
         save_button = selenium.find_element_by_id('save_btn_21')
         save_button.click()
         selenium.get('http://141.94.70.168/favorite/my_save_food/')
