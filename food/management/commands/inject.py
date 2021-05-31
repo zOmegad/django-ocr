@@ -11,7 +11,7 @@ class Command(BaseCommand):
         categories = openfoodfacts.facets.get_categories()
         print("Starting injection ...")
         progression = 0
-        for item in categories[:25]:
+        for item in categories[:5]:
             enum = 0
             cat_name = item['name']
             new_cat = Category(name=cat_name)
@@ -37,7 +37,7 @@ class Command(BaseCommand):
                     enum += 1
                     progression += 1
                     print("Injecting -> " + str(progression) + "/3750")
-                    if enum == 150:
+                    if enum == 15:
                         break
                 except BaseException:
                     pass
