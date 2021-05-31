@@ -20,13 +20,11 @@ class SavedProductTest(LiveServerTestCase):
         selenium.find_element_by_id("submit_btn").click()
 
         selenium.get('http://141.94.70.168/search/?query=Haricot')
-        try:
-            save_button = WebDriverWait(selenium, 10).until(
-                selenium.find_element_by_id('save_btn_21')
-            )
-        finally:
-            save_button.click()
-            selenium.get('http://141.94.70.168/favorite/my_save_food/')
-            food_card = selenium.find_element_by_class_name("card-title")
-            self.assertEqual(food_card.text, "Fonio complet")
-            selenium.quit()
+        save_button = WebDriverWait(selenium, 10).until(
+            selenium.find_element_by_id('save_btn_21')
+        )
+        save_button.click()
+        selenium.get('http://141.94.70.168/favorite/my_save_food/')
+        food_card = selenium.find_element_by_class_name("card-title")
+        self.assertEqual(food_card.text, "Fonio complet")
+        selenium.quit()
