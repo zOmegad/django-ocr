@@ -86,12 +86,12 @@ WSGI_APPLICATION = 'django_ocr.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv("DATABASE_ENGINE"),
-        'NAME': os.getenv("DATABASE_NAME"),
-        'USER': os.getenv("DATABASE_USER"),
-        'PASSWORD': os.getenv("DATABASE_PASSWORD"),
+        'ENGINE': "django.db.backends.postgresql_psycopg2",
+        'NAME': "ocr_petitbeurre",
+        'USER': "postgres",
+        'PASSWORD': "",
         'HOST': 'localhost',
-        'PORT': os.getenv("DATABASE_PORT"),
+        'PORT': "5432",
     }
 }
 
