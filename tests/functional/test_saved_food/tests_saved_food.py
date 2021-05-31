@@ -18,10 +18,12 @@ class SavedProductTest(LiveServerTestCase):
 
         username.send_keys("user_1")
         password.send_keys("azerty12345")
-        selenium.find_element_by_id("submit_btn").click()
-        selenium.get('http://141.94.70.168/search/?query=Haricot')
-        selenium.find_element_by_id("save_btn_21").click()
-        selenium.get('http://141.94.70.168/favorite/my_save_food/')
-        food_card = selenium.find_element_by_class_name("card-title")
-        self.assertEqual(food_card.text, "Fonio complet")
-        selenium.quit()
+        try:
+            selenium.find_element_by_id("submit_btn").click()
+            selenium.get('http://141.94.70.168/search/?query=Haricot')
+            selenium.find_element_by_id("save_btn_21").click()
+            selenium.get('http://141.94.70.168/favorite/my_save_food/')
+            food_card = selenium.find_element_by_class_name("card-title")
+            self.assertEqual(food_card.text, "Fonio complet")
+        finally:
+            selenium.quit()
