@@ -4,6 +4,8 @@ from food.models import Product
 
 
 class SavedProduct(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+
     product = models.ForeignKey(Product,
                                 on_delete=models.CASCADE)
     user = models.ForeignKey(
